@@ -2,13 +2,15 @@
 title: "RLesson 3 Logistic Regression"
 author: "Alan P Zelicoff"
 date: "April 4, 2017"
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r, echo=FALSE}
 
 load('rcourse_lesson3_environment.RData')
-
+library(stargazer)
 ```
 
 # Introduction
@@ -34,5 +36,16 @@ allstar.plot
 
 
 ## Buster Posey Data
+
+
+## Statistical Model
+```{r, echo=FALSE, results = 'asis'}
+stargazer::stargazer(allstar.glm, header = FALSE, type = 'latex',
+                     title = "Hierarchical (Multi-level) Model Results")
+                
+```
+
+
+
 
 # Conclusion
