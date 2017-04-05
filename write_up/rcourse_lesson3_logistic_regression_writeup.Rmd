@@ -30,12 +30,17 @@ I am going to try to go a bit beyond the exercise in the lesson and try to use t
 Here is the win percentage for the San Francisco Giants before and after the World Series break.
 
 
-```{r, echo=FALSE, fig.align='center'}
+```{r, echo=FALSE, fig.align='center', fig.height = 3, fig.width = 3}
 allstar.plot
 ```
 
 
 ## Buster Posey Data
+But maybe there is something to the belief that when Buster Posey walks the Giants are more likely to win.  Visualization of the data suggests this is the case.  
+
+```{r, echo=FALSE, fig.align='center', fig.height = 3, fig.width = 4.5}
+posey_walked.plot
+```
 
 
 ## Statistical Model
