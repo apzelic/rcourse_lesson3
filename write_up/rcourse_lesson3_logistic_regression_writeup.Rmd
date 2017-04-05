@@ -7,7 +7,7 @@ output:
   html_document: default
 ---
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, message=FALSE}
 
 load('rcourse_lesson3_environment.RData')
 library(stargazer)
@@ -25,12 +25,13 @@ I am going to try to go a bit beyond the exercise in the lesson and try to use t
 
 
 # Results
+We will look graphically at the Giant's win record as a function of time of the season (before and after the World Series break) and a function of when Buster Posey walks.
+
 
 ## Full Season Data
 Here is the win percentage for the San Francisco Giants before and after the World Series break.
 
-
-```{r, echo=FALSE, fig.align='center', fig.height = 3, fig.width = 3}
+```{r, echo=FALSE, fig.align='center', fig.height = 3, fig.width = 5}
 allstar.plot
 ```
 
@@ -45,12 +46,17 @@ posey_walked.plot
 
 ## Statistical Model
 ```{r, echo=FALSE, results = 'asis'}
-stargazer::stargazer(allstar.glm, header = FALSE, type = 'latex',
+stargazer::stargazer(allstar.glm, posey_walked.glm, header = FALSE, type = 'latex',
                      title = "Hierarchical (Multi-level) Model Results")
                 
 ```
 
-
-
-
 # Conclusion
+
+Conclusions can be rendered here.  But it appears we have successfully implemented the code.
+
+So, as a general rule of thumb, it appears useful to have the following folders:
+
+- data (which includes cleaned data)
+- figures (which generate the plot objects that become part of the environment)
+- scripts which generate the figures and the models.  The models are also objects in the enviornment that are then used by `RMarkdown`.
