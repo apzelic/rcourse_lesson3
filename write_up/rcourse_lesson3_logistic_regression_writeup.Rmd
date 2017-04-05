@@ -1,0 +1,38 @@
+---
+title: "RLesson 3 Logistic Regression"
+author: "Alan P Zelicoff"
+date: "April 4, 2017"
+output: html_document
+---
+
+```{r, echo=FALSE}
+
+load('rcourse_lesson3_environment.RData')
+
+```
+
+# Introduction
+
+We'll try taking the items that are in the environment from the calculations that have been done and stored in folders:
+
+- the **data** folder has the raw and *cleaned* data
+- the **figures** folder has the .pdf documents that display the raw data (in this case as bar plots)
+- the **scripts** folder has the code for reading, manipulating, cleaning and organizing the data, creating the figures and of course doing the statistics.
+
+I am going to try to go a bit beyond the exercise in the lesson and try to use the `stargazer` package for presenting the summary of the models.
+
+
+# Results
+
+## Full Season Data
+Here is the win percentage for the San Francisco Giants before and after the World Series break.
+
+
+```{r, echo=FALSE, fig.align='center'}
+allstar.plot
+```
+
+
+## Buster Posey Data
+
+# Conclusion

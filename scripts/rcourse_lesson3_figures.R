@@ -26,6 +26,7 @@ data_posey_figs_sum <- data_posey_figs %>%
 
 allstar.plot <- ggplot(data_figs_sum, aes(x = allstar_break, y = wins_perc)) +
     geom_bar(stat = "identity") +
+    ggtitle("Win percentage before and after the World Series break") + 
     ylim (0,100)
 
 pdf("figures/allstar.pdf")
